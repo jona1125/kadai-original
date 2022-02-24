@@ -1,0 +1,32 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #20201f;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand {
+  width: 96px;
+}
+
+.cocktail-logo {
+  width: 96px;
+  padding: 0;
+  margin: 0;
+}
+.cocktail-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-search-field {
+  border-radius: 4px 0px 0px 4px;
+  margin-right: 0;
+  background-color: #f0efed !important;
+  border: 0px solid #f0efed;
+}

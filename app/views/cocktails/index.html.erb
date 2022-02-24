@@ -1,0 +1,32 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1589527146/adam-wilson-6UIonphZA5o-unsplash_vk4ts6.jpg);">
+  <div class="container">
+    <h1><strong>Cocktail Recipes</strong></h1>
+    <p>Organize your favorite cocktail recipes.</p>
+    <%= link_to "Create a New Recipe", new_cocktail_path, class:"btn btn-cocktail" %>
+  </div>
+</div>
+
+<div class="cocktail-cards container">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card-trip">
+    <%= image_tag cocktail.photo, alt: "alttext" %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= cocktail.name %></h2>
+        <p><%= cocktail.description %></p>
+      </div>
+    </div>
+    <div class="center-button">
+              <%= link_to "See Details", cocktail_path(cocktail), class: "btn btn-cocktail"  %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<!-- 
+      <%# unless cocktail.reviews == [] %>
+      <h6 class="text-center"><%#= cocktail.reviews.first.rating %></h6>
+        <i class="far fa-star"></i>
+      <%# else %>
+      <h6 class="text-center">No Ratings Available</h6>
+      <%# end %> -->
